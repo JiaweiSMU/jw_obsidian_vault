@@ -5,7 +5,7 @@ excerpt: "Create your own template or use someone else's. Changing the template 
 # Data Engineering Stuff [[Data Engineering]]
 ## AWS
 
-## SQL 
+## SQL Coding Tests [[SQL Coding tests]]
 
 
 Publish your Obsidian Notes with a highly customizable Next.JS blog starter template. Features:
