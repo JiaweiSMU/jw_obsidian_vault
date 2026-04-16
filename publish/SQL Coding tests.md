@@ -11,6 +11,7 @@ Such questions are usually in this format - "Find all X that are associated with
 	- Find **employees** who completed **all** mandatory trainings
 	- Find **suppliers** who stock **all** parts needed for a product
 - Usually the table will have a Identifier column (e.g. User) and things that are associated with the user. There are usually duplicate identifier within the table
+
 To solve such a question
 1. Making use of **IN**, **GROUP BY** & **HAVING + COUNT**
 	1. skills in ('stuff we are searching for') -> Group by Identifier -> Having count() - Depends on how many they must match
