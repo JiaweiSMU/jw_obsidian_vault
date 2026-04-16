@@ -15,7 +15,9 @@ To solve such a question
 1. Making use of **IN**, **GROUP BY** & **HAVING + COUNT**
 	1. skills in ('stuff we are searching for') -> Group by Identifier -> Having count() - Depends on how many they must match
 2. Using **SELF-JOINS** 
-	1. Join the same table once per required skill
-		1. From table a where skill = 1, JOIN table b on a = b and skill = 2, so on and forth
+	1. select a.id from table a 
+		   join table b on a.id = b.id and skill = 2
+		   join table c on a.id = c.id and skill = 3
+		where a.skill = 1 (**This must be at the end can't put at the start**)
 
 
