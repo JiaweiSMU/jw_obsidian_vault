@@ -4,7 +4,7 @@ A histogram maps **values → frequency of occurrence**.
 	1. Group by item, then count
 	2. Group by the count of the item
 ### Relational Division Problem
-Such questions are usually in this format - "Find all X that are associated with all of a given set of Y"
+Such questions are usually in this format - "*Find all X that are associated with all of a given set of Y*"
 - Example questions include
 	- Find **customers** who bought **all** products in a bundle
 	- Find **students** who passed **all** required courses
@@ -21,4 +21,11 @@ To solve such a question
 		   join table c on a.id = c.id and skill = 3
 		where a.skill = 1 (**This must be at the end can't put at the start**)
 
+### Anti Join
+These type of questions usually ask, "*Find records with no match in another table*"
 
+Two ways to solve this problem
+1. LEFT JOIN + IS NULL
+	1. Join table A and B, check that the key in table B is NULL 
+2. SUBQUERY with NOT IN
+	1. Select query where id not in (select id from table B)
