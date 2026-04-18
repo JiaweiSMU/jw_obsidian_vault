@@ -29,3 +29,11 @@ Two ways to solve this problem
 	1. Join table A and B, check that the key in table B is NULL 
 2. SUBQUERY with NOT IN
 	1. Select query where id not in (select id from table B)
+
+### Conditional Aggregation Pattern
+Where *Aggregate* (SUM, COUNT, AVG) functions are selected based on some kind of condition
+- To take note, always **END** before the closing ')'
+
+Types
+1. SUM(CASE when col_name = 'A' then 1 else 0 end) as new_name
+2. SUM(CASE when col_name in ('A', 'B') then 1 else 0 end) as new_name
