@@ -33,6 +33,7 @@ Two ways to solve this problem
 ### Conditional Aggregation Pattern
 Where *Aggregate* (SUM, COUNT, AVG) functions are selected based on some kind of condition
 - To take note, always **END** before the closing ')'
+- The conditional arg is not using 'WHERE' but '**WHEN**'
 
 Types
 1. SUM(CASE when col_name = 'A' then 1 else 0 end) as new_name
