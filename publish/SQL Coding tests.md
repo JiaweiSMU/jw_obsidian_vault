@@ -38,3 +38,12 @@ Where *Aggregate* (SUM, COUNT, AVG) functions are selected based on some kind of
 Types
 1. SUM(CASE when col_name = 'A' then 1 else 0 end) as new_name
 2. SUM(CASE when col_name in ('A', 'B') then 1 else 0 end) as new_name
+
+### Finding Duplicates
+There are 3 types 
+1. Identifying duplicates group, to count how many duplicates there are ![[Pasted image 20260503151912.png]]
+	1. Done using **Group By**
+2. Finding out which pairs are duplicated - To see which rows match which rows
+	1. Done using **Self Join**
+3. For labelling duplicates then either keep one or mark the others![[Pasted image 20260503152020.png]]
+	1. Done using **Row Number**
