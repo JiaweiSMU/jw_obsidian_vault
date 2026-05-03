@@ -39,7 +39,7 @@ Types
 1. SUM(CASE when col_name = 'A' then 1 else 0 end) as new_name
 2. SUM(CASE when col_name in ('A', 'B') then 1 else 0 end) as new_name
 
-### Finding Duplicates
+### Finding Duplicates Pattern
 There are 3 types 
 1. Identifying duplicates group, to count how many duplicates there are ![[Pasted image 20260503151912.png]]
 	1. Done using **Group By**
