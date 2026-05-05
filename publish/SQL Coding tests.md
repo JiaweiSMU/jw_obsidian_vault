@@ -34,6 +34,7 @@ Two ways to solve this problem
 Where *Aggregate* (SUM, COUNT, AVG) functions are selected based on some kind of condition
 - To take note, always **END** before the closing ')'
 - The conditional arg is not using 'WHERE' but '**WHEN**'
+> [! Don't overthink the CASE operations, if it's a SUM then just call the Col_value, else just do a -Col_value]
 
 Types
 1. SUM(CASE when col_name = 'A' then 1 else 0 end) as new_name
