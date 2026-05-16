@@ -10,5 +10,5 @@ These are a form of **WINDOW FUNCTION** and need to be used together with <u>*OR
 > Syntax for LAG / LEAD
 > 	LAG(column, offset, default)
 > 	Offset refers to get value from X row
-- LAG - Gets value from an earlier row
+- LAG - Gets value from the row before
 - LEAD - Get value from a later row
