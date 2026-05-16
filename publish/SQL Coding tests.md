@@ -65,3 +65,4 @@ Types:
 - Look backwards
 	- Preceding - Looks at rows before current row
 		- ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+
