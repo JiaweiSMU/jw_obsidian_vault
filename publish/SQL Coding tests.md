@@ -58,9 +58,10 @@ Code:
 > 	AVG(amount) over(order by id 
 > 	<u>ROWS BETWEEN CURRENT ROW and 6 FOLLOWING</u>) 
 > as rolling_avg_next_7
-
 Types:
-1. For current rows and next 6 
-	1. ROWS BETWEEN CURRENT ROW and X
-2. Exclude current row and average next 7
-	1. ROWS BETWEEN 1 FOLLOWING and x FOLLOWING
+- Look forward
+	- Following - Looks at rows after current row
+		- ROWS BETWEEN CURRENT ROW and 6 FOLLOWING 
+- Look backwards
+	- Preceding - Looks at rows before current row
+		- ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
