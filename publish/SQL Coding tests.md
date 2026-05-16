@@ -34,7 +34,7 @@ Two ways to solve this problem
 Where *Aggregate* (SUM, COUNT, AVG) functions are selected based on some kind of condition
 - To take note, always **END** before the closing ')'
 - The conditional arg is not using 'WHERE' but '**WHEN**'
-> [! Don't overthink the CASE operations, if it's a SUM then just call the Col_value, else just do a -Col_value]
+> Don't overthink the CASE operations, if it's a SUM then just call the Col_value, else just do a -Col_value
 
 Types
 1. SUM(CASE when col_name = 'A' then 1 else 0 end) as new_name
@@ -48,3 +48,19 @@ There are 3 types
 	1. Done using **Self Join**
 3. For labelling duplicates then either keep one or mark the others![[Pasted image 20260503152020.png]]
 	1. Done using **Row Number**
+
+### Rolling average for next 7 rows
+Use an **AVG aggregate** together with **Window Function** 
+
+Code:
+> Select
+> 	id, amount,
+> 	AVG(amount) over(order by id 
+> 	<u>ROWS BETWEEN CURRENT ROW and 6 FOLLOWING</u>) 
+> as rolling_avg_next_7
+
+Types:
+1. For current rows and next 6 
+	1. ROWS BETWEEN CURRENT ROW and X
+2. Exclude current row and average next 7
+	1. ROWS BETWEEN 1 FOLLOWING and x FOLLOWING
