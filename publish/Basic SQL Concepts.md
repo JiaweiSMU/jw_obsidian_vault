@@ -11,4 +11,4 @@ These are a form of **WINDOW FUNCTION** and need to be used together with <u>*OR
 > 	LAG(column, offset, default)
 > 	Offset refers to get value from X row
 - LAG - Gets value from an earlier row
-- LEAD - Get value from a layer row
+- LEAD - Get value from a later row
